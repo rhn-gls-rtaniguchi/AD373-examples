@@ -1,0 +1,12 @@
+org.jbpm.casemgmt.api.model.instance.CaseFileInstance cfi = (org.jbpm.casemgmt.api.model.instance.CaseFileInstance)kcontext.getCaseData();
+DisputeData dd = (DisputeData) cfi.getData("disputeData");
+dd.setCardholderRiskRating(((java.math.BigDecimal) kcontext.getVariable("cardholderRiskRating")).intValue());
+dd.setDisputeRiskRating(((java.math.BigDecimal) kcontext.getVariable("disputeRiskRating")).intValue());
+dd.setAutomated((Boolean) kcontext.getVariable("automaticApproval"));
+if (dd.isAutomated()) {
+    dd.setApproved(true);
+}
+
+System.out.println("Card Holder Risk Rating : " + kcontext.getVariable("cardholderRiskRating"));
+System.out.println("Dispute Risk Rating : " + kcontext.getVariable("disputeRiskRating"));
+System.out.println("Automatic approval : " + kcontext.getVariable("automaticApproval"));\n

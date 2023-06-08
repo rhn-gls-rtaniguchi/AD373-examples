@@ -1,0 +1,8 @@
+- IDE plugins:
+
+Eclipse (STS) - https://tools.jboss.org/downloads/
+IntelliJ - https://plugins.jetbrains.com/plugin/14588-jboss-jbpm / https://plugins.jetbrains.com/plugin/16871-drools
+VSCode: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-extension-red-hat-business-automation-bundle
+https://marketplace.visualstudio.com/items?itemName=redhat.vscode-extension-dmn-editor
+
+

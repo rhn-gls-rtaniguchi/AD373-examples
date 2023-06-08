@@ -1,0 +1,16 @@
+
+{
+  "org.jbpm.document.service.impl.DocumentImpl" : {
+    "identifier" : "ef21c416-9986-11e8-86ec-507b9d27afbf",
+    "name" : "cardholderdoc.txt",
+    "link" : "",
+    "size" : 18,
+    "lastModified" : {
+      "java.util.Date" : 1533564090465
+    },
+    "content" : "RG9jdW1lbnQgZXhhbXBsZS4K",
+    "attributes" : {
+      "_UPDATED_" : "true"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+
+{
+  "case-data" : {
+  	"cardID" : "123456789",
+    "disputeAmount" : "50",
+    "cardholderAge" : 25,
+    "cardholderStatus" : "GOLD",
+    "incidentCount" : 1
+    },
+  "case-user-assignments" : {},
+  "case-group-assignments" : {}
+}

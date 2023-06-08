@@ -1,0 +1,4 @@
+org.jbpm.casemgmt.api.model.instance.CaseFileInstance cfi = (org.jbpm.casemgmt.api.model.instance.CaseFileInstance)kcontext.getCaseData();
+String caseDef = cfi.getDefinitionId();
+String caseId = cfi.getCaseId();
+System.out.println("Case '" + caseDef + " - " + caseId + "' started");

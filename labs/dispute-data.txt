@@ -1,0 +1,7 @@
+
+org.jbpm.casemgmt.api.model.instance.CaseFileInstance cfi = (org.jbpm.casemgmt.api.model.instance.CaseFileInstance)kcontext.getCaseData();
+DisputeData _disputeData = (DisputeData)cfi.getData("disputeData");
+
+Boolean _approved = (Boolean)kcontext.getVariable("agentApproval");
+
+_disputeData.setApproved(_approved);

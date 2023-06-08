@@ -1,0 +1,24 @@
+
+org.jbpm.casemgmt.api.model.instance.CaseFileInstance cfi = (org.jbpm.casemgmt.api.model.instance.CaseFileInstance)kcontext.getCaseData();
+String caseDef = cfi.getDefinitionId();
+String caseId = cfi.getCaseId();
+System.out.println("Case '" + caseDef + " - " + caseId + "' started");
+
+DisputeData dd = new DisputeData();
+
+dd.setCardId((String) kcontext.getVariable("caseFile_cardId"));
+dd.setAmount(new java.math.BigDecimal((String) kcontext.getVariable("caseFile_disputeAmount")));
+dd.setCardholderAge((Integer) kcontext.getVariable("caseFile_cardholderAge"));
+dd.setCardholderStatus((String) kcontext.getVariable("caseFile_cardholderStatus"));
+dd.setIncidentCount((Integer)kcontext.getVariable("caseFile_incidentCount"));
+dd.setAutomated(false);
+dd.setApproved(false);
+dd.setCardholderRiskRating(0);
+dd.setDisputeRiskRating(0);
+dd.setCaseId(caseId);
+
+cfi.add("disputeData", dd);
+
+System.out.println("Dispute Data (amount, status, age, incidentCount) : "
+    + dd.getAmount().toString() + "," + dd.getCardholderStatus() + ","
+    + dd.getCardholderAge() + "," + dd.getIncidentCount());

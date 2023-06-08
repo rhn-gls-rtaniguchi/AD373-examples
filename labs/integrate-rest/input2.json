@@ -1,0 +1,37 @@
+{
+"commands":[
+  {
+    "insert":{
+      "object":{
+        "com.ad364.bc_tables.OperatingSystem":{
+          "osName":"Linux/Windows"
+        }
+      },
+      "return-object":false
+    }
+  },
+  {
+    "insert":{
+      "object":{
+        "com.ad364.bc_tables.TravelProfile":{
+          "travelPercent":50,
+          "noTravel":false
+        }
+      },
+      "return-object":false
+    }
+  },
+  {
+    "fire-all-rules":{
+    }
+  },
+  {
+    "get-objects": {
+      "out-identifier": "objects"
+    }
+  },
+  { 
+    "dispose": {}
+  }
+]
+}

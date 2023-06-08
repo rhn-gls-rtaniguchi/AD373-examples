@@ -1,0 +1,15 @@
+{
+  "case-data" : {
+    "cardID" : "123456789",
+    "disputeAmount" : "120",
+    "cardholderAge" : 25,
+    "cardholderStatus" : "STANDARD",
+    "incidentCount" : 3
+    },
+  "case-user-assignments" : {
+    "manager": "manager11"
+  },
+  "case-group-assignments" : {
+    "agent": "agentgroup1"
+  }
+}

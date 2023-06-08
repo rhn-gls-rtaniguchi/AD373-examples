@@ -1,0 +1,11 @@
+
+java.util.Map<String, Object> cardholderMap = new java.util.HashMap<>();
+cardholderMap.put("Age", dd.getCardholderAge());
+cardholderMap.put("Status", dd.getCardholderStatus());
+cardholderMap.put("IncidentCount", dd.getIncidentCount());
+
+java.util.Map<String, Object> disputeMap = new java.util.HashMap<>();
+disputeMap.put("DisputeAmount", dd.getAmount());
+
+kcontext.setVariable("decisionCardholder", cardholderMap);
+kcontext.setVariable("decisionDispute", disputeMap);

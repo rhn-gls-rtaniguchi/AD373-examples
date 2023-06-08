@@ -1,0 +1,9 @@
+
+String _comments = (String)kcontext.getVariable("managerComments");
+
+org.jbpm.casemgmt.api.CaseService caseService = (org.jbpm.casemgmt.api.CaseService) org.jbpm.services.api.service.ServiceRegistry.get().service(org.jbpm.services.api.service.ServiceRegistry.CASE_SERVICE);
+
+com.acme.fis.credit_card_dispute.DisputeData _disputeData = (com.acme.fis.credit_card_dispute.DisputeData) caseFile_disputeData;
+caseService.addCaseComment(_disputeData.getCaseId(), "manager", _comments);
+
+kcontext.setVariable("managerComments", null);

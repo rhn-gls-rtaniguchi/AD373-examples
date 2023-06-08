@@ -1,0 +1,18 @@
+package com.acme.fis.credit_card_dispute;
+
+import org.jbpm.casemgmt.api.CaseService;
+import org.jbpm.services.api.service.ServiceRegistry;
+import org.jbpm.casemgmt.api.model.instance.CaseFileInstance;
+
+rule "Trigger Ask for Comments"
+
+when
+    $caseData : CaseFileInstance()
+    String(this == "AskForComments") from $caseData.getData("Action")
+
+then
+    $caseData.remove("Action");
+    CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE);
+    caseService.triggerAdHocFragment($caseData.getCaseId(), "Ask For Comments", null);
+    System.out.println("Case " + $caseData.getCaseId() + " Ask for Comments triggered");
+end
